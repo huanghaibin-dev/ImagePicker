@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@drawable/image_picker_selector_ripple"
+    android:gravity="center"
+    android:minHeight="90dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_cam"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/image_picker_app_name"
+        android:src="@drawable/ic_camera" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="照一张" />
+</LinearLayout>

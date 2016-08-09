@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="image_picker_white">#FFFFFF</color>
+    <color name="image_picker_black">#000000</color>
+    <color name="image_picker_gray">#d4d4d4</color>
+    <color name="image_picker_background">#f0f0f0</color>
+    <color name="image_picker_transparent">#00000000</color>
+
+    <color name="image_picker_line_gray">#e6e6e6</color>
+    <color name="image_picker_light_gray">#eeeeee</color>
+    <color name="image_picker_dim_gray">#696969</color>
+    <color name="image_picker_light_blue">#49c5fd</color>
+
+    <color name="image_picker_main_text_color">#979797</color>
+    <color name="image_picker_text_gray">#6c6c6c</color>
+    <color name="image_picker_text_red">#ed5353</color>
+    <color name="image_picker_text_black">#323232</color>
+    <color name="image_picker_text_blue">#1690dd</color>
+
+</resources>

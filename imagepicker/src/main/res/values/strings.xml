@@ -1,0 +1,8 @@
+<resources>
+    <string name="image_picker_app_name">ImagePicker</string>
+    <string name="image_picker_state_network_error">网络错误</string>
+    <string name="image_picker_state_loading">正在加载…</string>
+    <string name="image_picker_state_not_more">没有更多数据</string>
+    <string name="image_picker_state_load_error">加载失败</string>
+    <string name="image_picker_state_refreshing">正在刷新</string>
+</resources>
