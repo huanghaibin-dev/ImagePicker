@@ -35,7 +35,7 @@ ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.Select
                     }
                 })); 
 ```
-##licenses
+##Licenses
 - Copyright (C) 2013 huanghaibin_dev <huanghaibin_dev@163.com>
  
 - Licensed under the Apache License, Version 2.0 (the "License");
