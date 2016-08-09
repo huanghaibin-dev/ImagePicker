@@ -7,7 +7,15 @@ An Image picker for Android, this picker can take photo, single or multi pick mo
 ```
 compile 'com.github.huanghaibin:imagepicker:1.0.6'
 ```
-###using
+
+###AndroidManifest
+```
+<activity android:name="com.huanghaibin_dev.imagepicker.ImagePickerActivity" />
+<activity
+            android:name="com.huanghaibin_dev.imagepicker.ImageGalleryActivity"
+            android:theme="@style/image_picker_Theme.Dialog.NoTitle.Translucent" />
+```
+###using code
 ```
 ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.SelectMode.MULTI_MODE)
                 .toolBarBackground(0xff24936e)
