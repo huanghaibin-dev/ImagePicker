@@ -1,7 +1,7 @@
 # ImagePicker
 An Image picker for Android, this picker can take photo, single or multi pick mode,you can use the image loader you like adn use configuration parameters, that is efficient.
 ###
-这是一个图片选择器，可以在内部拍照并自动选择该图片，您可以在指定单选或多选模式，甚至是摄像头，如果您想自定义图片加载器也可以，它很高效自由。
+这是一个图片选择器，可以在内部拍照并自动选择该图片，您可以在指定单选或多选模式，甚至是指定开启摄像头，它已经处理了权限问题，无需自己去判断APP的权限，如果您想自定义图片加载器也可以，它很高效自由。
 
 ###gradle
 ```
@@ -29,10 +29,6 @@ ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.Select
 ```
 ##licenses
 - Copyright (C) 2013 huanghaibin_dev <huanghaibin_dev@163.com>
-- WebSite https://github.com/MiracleTimes-Dev
-- Created 8/1/2016
-- Changed 8/1/2015
-- Version 1.0.2
  
 - Licensed under the Apache License, Version 2.0 (the "License");
 - you may not use this file except in compliance with the License.
