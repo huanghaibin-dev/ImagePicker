@@ -27,7 +27,7 @@ ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.Select
                         Glide.with(ApplicationContext).load(path).placeholder(R.drawable.ic_default).into(iv);
                     }
                 })
-                .selectedImages(mediaAAr)
+                .selectedImages(AyyarList<String> selectedImages)
                 .callBack(new SelectedCallBack() {
                     @Override
                     public void doBack(ArrayList<String> images) {
