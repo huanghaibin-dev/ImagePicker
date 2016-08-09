@@ -14,6 +14,9 @@ import android.widget.TextView;
 
 import com.huanghaibin_dev.imagepicker.utils.ImageConfig;
 
+import net.thanatosx.previewer.ImagePreviewView;
+import net.thanatosx.previewer.PreviewerViewPager;
+
 
 /**
  * Created by huanghaibin_dev
@@ -21,7 +24,7 @@ import com.huanghaibin_dev.imagepicker.utils.ImageConfig;
  */
 
 public class ImageGalleryActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
-    private ViewPager vp_image;
+    private PreviewerViewPager vp_image;
     private TextView tv_index;
     private static ImageConfig mConfig;
     private ViewPagerAdapter mAdapter;
@@ -40,7 +43,7 @@ public class ImageGalleryActivity extends AppCompatActivity implements ViewPager
         setContentView(R.layout.image_picker_activity_image_gallery);
         getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         setTitle("");
-        vp_image = (ViewPager) findViewById(R.id.vp_image);
+        vp_image = (PreviewerViewPager) findViewById(R.id.vp_image);
         tv_index = (TextView) findViewById(R.id.tv_index);
         mAdapter = new ViewPagerAdapter();
         vp_image.setAdapter(mAdapter);
@@ -85,6 +88,12 @@ public class ImageGalleryActivity extends AppCompatActivity implements ViewPager
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             ImagePreviewView view = new ImagePreviewView(ImageGalleryActivity.this);
+            view.setOnReachBorderListener(new ImagePreviewView.OnReachBorderListener() {
+                @Override
+                public void onReachBorder(boolean isReached) {
+                    vp_image.isInterceptable(isReached);
+                }
+            });
             view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT));
             if (mConfig.getLoaderListener() != null) {

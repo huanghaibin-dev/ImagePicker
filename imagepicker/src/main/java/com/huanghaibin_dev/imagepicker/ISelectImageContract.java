@@ -10,6 +10,8 @@ public interface ISelectImageContract {
         void requestCamera();
 
         void requestExternalStorage();
+
+        void setDataView(View view);
     }
 
     interface View {

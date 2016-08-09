@@ -27,6 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'pub.devrel:easypermissions:0.1.7'
     compile 'com.android.support:design:23.3.0'
+    compile 'net.thanatosx.widgets:previewer:1.1.1'
     testCompile 'junit:junit:4.12'
 }
 

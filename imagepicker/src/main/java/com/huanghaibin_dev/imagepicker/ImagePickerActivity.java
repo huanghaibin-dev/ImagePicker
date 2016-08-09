@@ -9,10 +9,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import com.huanghaibin_dev.imagepicker.utils.ImageConfig;
 
@@ -44,7 +43,10 @@ public class ImagePickerActivity extends AppCompatActivity implements EasyPermis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.image_picker_activity_image_picker);
-        getSupportActionBar().hide();
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         initData();
     }
 
@@ -78,6 +80,10 @@ public class ImagePickerActivity extends AppCompatActivity implements EasyPermis
         }
     }
 
+    @Override
+    public void setDataView(ISelectImageContract.View view) {
+        mView = view;
+    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -133,7 +139,6 @@ public class ImagePickerActivity extends AppCompatActivity implements EasyPermis
     private void handleView() {
         try {
             ImagePickerFragment fragment = ImagePickerFragment.getInstance(mConfig);
-            mView = fragment;
             FragmentTransaction trans = getSupportFragmentManager()
                     .beginTransaction();
             trans.replace(R.id.fl_content, fragment);

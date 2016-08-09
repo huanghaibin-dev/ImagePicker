@@ -87,11 +87,22 @@ public class ImageConfig {
         return this;
     }
 
+    /**
+     * 设置标题栏颜色
+     *
+     * @param color
+     * @return toolBarBackground
+     */
     public ImageConfig toolBarBackground(@ColorInt int color) {
         mToolBarBackgroundColor = color;
         return this;
     }
 
+    /**
+     * 标题栏颜色
+     *
+     * @return 标题栏颜色colorInt
+     */
     public
     @ColorInt
     int getToolBackground() {

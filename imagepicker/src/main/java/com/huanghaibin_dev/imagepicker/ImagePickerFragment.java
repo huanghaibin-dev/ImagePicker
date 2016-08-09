@@ -75,6 +75,7 @@ public class ImagePickerFragment extends Fragment implements ISelectImageContrac
     @Override
     public void onAttach(Context context) {
         this.mOperator = (ISelectImageContract.Operator) context;
+        this.mOperator.setDataView(this);
         super.onAttach(context);
     }
 
@@ -260,6 +261,7 @@ public class ImagePickerFragment extends Fragment implements ISelectImageContrac
                     rv_image.scrollToPosition(0);
                     mFolderPopupWindow.dismiss();
                     tv_folder_name.setText(folder.getName());
+                    mImageFolderAdapter.setSelectedPosition(position);
                 }
             });
             mFolderPopupWindow.setListener(new ImageFolderPopupWindow.IPopupWindowListener() {
@@ -434,6 +436,8 @@ public class ImagePickerFragment extends Fragment implements ISelectImageContrac
                 btn_preview.setText("预览(" + mSelectedImage.size() + ")");
                 if (mConfig != null && mConfig.getSelectMode() == ImageConfig.SelectMode.SINGLE_MODE && mCamImageName != null) {
                     handleResult();
+                }else {
+                    handButtonStates();
                 }
             }
         }
