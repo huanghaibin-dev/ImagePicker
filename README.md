@@ -19,5 +19,5 @@ ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.Select
                     public void doBack(ArrayList<String> images) {
                        
                     }
-                }));
+                })); 
 
