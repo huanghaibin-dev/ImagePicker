@@ -5,7 +5,7 @@ An Image picker for Android, this picker can take photo, single or multi pick mo
 
 ###gradle
 ```
-compile 'com.github.huanghaibin:imagepicker:1.0.6'
+compile 'com.github.huanghaibin:imagepicker:1.0.8'
 ```
 
 ###AndroidManifest
@@ -35,6 +35,10 @@ ImagePickerActivity.show(this, ImageConfig.Build().selectMode(ImageConfig.Select
                     }
                 })); 
 ```
+
+###Priview效果预览
+<img src="https://github.com/MiracleTimes-Dev/GitHubProjectPicture/blob/master/ImagePicker/Screenshot_2016-08-09-15-09-00-965_image_picker.png" height="650"/> <img src="https://github.com/MiracleTimes-Dev/GitHubProjectPicture/blob/master/ImagePicker/Screenshot_2016-08-09-15-09-57-467_image_picker.png" height="650"/> <img src="https://github.com/MiracleTimes-Dev/GitHubProjectPicture/blob/master/ImagePicker/Screenshot_2016-08-09-15-10-11-881_image_picker.png" height="650"/> <img src="https://github.com/MiracleTimes-Dev/GitHubProjectPicture/blob/master/ImagePicker/Screenshot_2016-08-09-15-11-04-277_image_picker.png" height="650"/> 
+
 ##Licenses
 - Copyright (C) 2013 huanghaibin_dev <huanghaibin_dev@163.com>
  
