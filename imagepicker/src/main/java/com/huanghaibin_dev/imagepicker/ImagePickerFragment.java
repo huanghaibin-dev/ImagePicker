@@ -381,7 +381,7 @@ public class ImagePickerFragment extends Fragment implements ISelectImageContrac
                         images.add(image);
 
                         //如果是新拍的照片
-                        if (mCamImageName != null && mCamImageName.toLowerCase().equals(image.getName().toLowerCase())) {
+                        if (mCamImageName != null && mCamImageName.equals(image.getName())) {
                             image.setSelect(true);
                             mSelectedImage.add(image);
                         }
